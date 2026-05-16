@@ -1,0 +1,109 @@
+# Node artifacts
+node_modules/
+dist/
+npm-debug.log*
+yarn-error.log*
+*.sql
+
+# Python
+*.py[cod]
+__pycache__/
+openswoole-master
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+
+# Java
+*.class
+*.jar
+target/
+
+# Logs
+*.log
+logs/
+*.out
+
+# OS generated
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Build artifacts / temp files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+*.swo
+
+# Applications
+*.app
+*.exe
+*.war
+*.dll
+
+# Media / large files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp3
+*.wav
+
+# Vendor / assets
+vendor/
+**/public_html/assets/
+**/public_html/100**
+**/public_html/contents
+**/public_html/old
+**/public_html/test**
+
+# Lock files
+*.lock
+package-lock.json
+yarn.lock
+Pipfile.lock
+
+# Coverage / test reports
+coverage/
+*.cover
+*.lcov
+*.xml
+*.html
+*.report
+TEST*.xml
+
+# Temporary files from editors
+*~
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+cpp-server
+
+**/var/**
+**/tmp/**
+
+.env
+.env.*
+
+**/__dev__
+**/__dev__/**
+
+# projects
+deploy/build
