@@ -36,7 +36,7 @@ require __DIR__ . '/vendor/autoload.php';
 ## Quick Start
 
 ```php
-use PhpJWT\JWTManager;
+use AlfaCode\PhpJWT\JWTManager;
 
 $manager = new JWTManager([
     'algorithm'  => 'HS256',
@@ -118,7 +118,7 @@ $manager = new JWTManager([
 ### Redis (recommended for production)
 
 ```php
-use PhpJWT\Storage\RedisTokenStorage;
+use AlfaCode\PhpJWT\Storage\RedisTokenStorage;
 
 $redis   = new Redis();
 $redis->connect('127.0.0.1', 6379);
@@ -130,7 +130,7 @@ $manager = new JWTManager($config, $storage);
 ### PDO — MySQL, PostgreSQL, SQLite
 
 ```php
-use PhpJWT\Storage\PDOTokenStorage;
+use AlfaCode\PhpJWT\Storage\PDOTokenStorage;
 
 $pdo     = new PDO('mysql:host=localhost;dbname=myapp', 'user', 'pass');
 $storage = new PDOTokenStorage($pdo);
@@ -145,7 +145,7 @@ $storage->purgeExpired();
 ### File (zero-dependency, dev/testing)
 
 ```php
-use PhpJWT\Storage\FileTokenStorage;
+use AlfaCode\PhpJWT\Storage\FileTokenStorage;
 
 $storage = new FileTokenStorage(__DIR__ . '/storage/jwt');
 $manager = new JWTManager($config, $storage);
@@ -156,7 +156,7 @@ $manager = new JWTManager($config, $storage);
 ## Asymmetric Keys (RS256 / ES256)
 
 ```php
-use PhpJWT\KeyGenerator;
+use AlfaCode\PhpJWT\KeyGenerator;
 
 // One-time: generate and save keys
 $rsaKeys = KeyGenerator::generateRsaKeyPair(4096);
@@ -185,7 +185,7 @@ $ecKeys = KeyGenerator::generateEcKeyPair('prime256v1');
 ### Plain PHP
 
 ```php
-use PhpJWT\Middleware\JWTMiddleware;
+use AlfaCode\PhpJWT\Middleware\JWTMiddleware;
 
 $mw = new JWTMiddleware($manager);
 
@@ -225,7 +225,7 @@ $app->get('/me', function($req, $res) {
 For fine-grained control over the exact payload:
 
 ```php
-use PhpJWT\Token\{JWT, TokenBuilder};
+use AlfaCode\PhpJWT\Token\{JWT, TokenBuilder};
 
 $jwt   = new JWT('HS512');
 $token = (new TokenBuilder())
